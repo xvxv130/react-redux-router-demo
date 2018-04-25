@@ -23,12 +23,11 @@ React-router4
   Router路由对应渲染组件，可嵌套
   Link跳转专用
 
-  url参数，Route组件参数可用冒号标识参数
+  复杂redux应用，多个reducer，用combineReducers合并
   Redirect组件 跳转(重定向)
   Switch只渲染一个子Route组件
 
-
-
+ 
 
   router+redux
   app.js(组件页)
@@ -36,3 +35,7 @@ React-router4
   Auth.dedux.js（登录相关redux页）
   index.redux 内容
   Dashboard.js 路由逻辑
+
+
+  axios进行异步数据请求
+  proxy统一请求的端口

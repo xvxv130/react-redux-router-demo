@@ -1,10 +1,8 @@
 import React from 'react'
 import {
-    BrowserRouter,
     Route,
     Link,
-    Redirect,
-    Switch
+    Redirect
 } from 'react-router-dom'
 import {connect} from 'react-redux'
 import {logout} from './Auth.redux'
@@ -17,11 +15,9 @@ function Qibinglian(){
 }
 @connect(state=>state.auth,{logout})
 class Dashboard extends React.Component{
-    constructor(props){
-        super(props)
-        
-    }
     render(){
+        const match=this.props.match;
+        console.log(match);
         const redireactToLogin=<Redirect to='/login'></Redirect>
         const app=(
             <div>
@@ -30,18 +26,18 @@ class Dashboard extends React.Component{
                 <ul>
                 {/* 点击跳到指定路由 */}
                     <li>
-                        <Link to='/dashboard/'>一营</Link>
+                        <Link to={`${match.url}/`}>一营</Link>
                     </li>
                     <li>
-                        <Link to='/dashboard/erying'>二营</Link>
+                        <Link to={`${match.url}/erying`}>二营</Link>
                     </li>
                     <li>
-                        <Link to='/dashboard/qibinglian'>骑兵连</Link>
+                        <Link to={`${match.url}/qibinglian`}>骑兵连</Link>
                     </li>
                 </ul>
-                <Route path='/dashboard/' exact component={App}></Route>
-                <Route path='/dashboard/erying' component={Erying}></Route>
-                <Route path='/dashboard/qibinglian' component={Qibinglian}></Route>
+                <Route path={`${match.url}/`} exact component={App}></Route>
+                <Route path={`${match.url}/erying`} component={Erying}></Route>
+                <Route path={`${match.url}/qibinglian`} component={Qibinglian}></Route>
            
             </div>
         )

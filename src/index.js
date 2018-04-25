@@ -3,14 +3,14 @@ import ReactDOM from 'react-dom';
 import {createStore,applyMiddleware,compose} from 'redux'//compose对函数进行组合
 import thunk from 'redux-thunk'
 import {Provider} from 'react-redux'
+import './config'
+import 'antd-mobile/dist/antd-mobile.css'
 import {
     BrowserRouter,
     Route,
-    Link,
     Redirect,
     Switch
 } from 'react-router-dom'
-import App from './App';
 // import {counter} from './index.redux'
 import reducers from './reducer'
 import Auth from './Auth'
@@ -22,7 +22,6 @@ const store=createStore(reducers,compose(
     window.devToolsExtension?window.devToolsExtension():f=>f
 ));
 
-console.log(store.getState());
 // 登录
 //     没有登录信息 统一跳转login
 // 页面  导航+显示+注销
