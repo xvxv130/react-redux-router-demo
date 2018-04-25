@@ -1,3 +1,5 @@
+这个demo是用react+redux+router实现的一个小的demo。对我这个菜鸟收益很大，对redeux有了一个新的理解
+
 redux-thunk 异步处理数据，主要在action-creater阶段进行应用
 react-redux 优雅的链接react和dedux(可以忘记subscribe)
 react-redux提供provider和connect两个接口来链接react和redux
@@ -35,7 +37,10 @@ React-router4
   Auth.dedux.js（登录相关redux页）
   index.redux 内容
   Dashboard.js 路由逻辑
+<<<<<<< HEAD
 
 
   axios进行异步数据请求
   proxy统一请求的端口
+=======
+>>>>>>> 4af1ea5d6b0513fca3a53e7eb6377f9d7cbb9763
